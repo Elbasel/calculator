@@ -14,28 +14,28 @@
     <main>
         <div id="calc">
             <div id="display">
-                <div id="display-text">2 + 2</div>
+                <div id="display-text">&nbsp</div>
             </div>
             <div id="buttons">
                <div class="row">
                 <button id="clear-button">C</button>
                 <button id="delete-button">Del</button>
-                <button>+</button>
+                <button id="add-button" class="operator">+</button>
                </div>
                <div class="row">
                    <button class="num">1</button>
                    <button class="num">2</button>
-                   <button id="minus-button">-</button>
+                   <button id="minus-button" class="operator">-</button>
                </div>
                <div class="row">
                    <button class="num">3</button>
                    <button class="num">4</button>
-                   <button id="divide-button">÷</button>
+                   <button id="divide-button" class="operator">÷</button>
                </div>
                <div class="row">
                    <button class="num">5</button>
                    <button class="num">6</button>
-                   <button id="multiply-button">×</button>
+                   <button id="multiply-button" class="operator">×</button>
                </div>
                <div class="row">
                    <button class="num">7</button>
@@ -50,7 +50,12 @@
 
             </div>
         </div>
-        <div id="history"></div>
+        <div id="history">
+            <div id="clear-history-button-area">
+                <button id="clear-history-button">Clear</button>
+            </div>
+            <div id="history-entries"></div>
+        </div>
     </main>
 </body>
 </html>

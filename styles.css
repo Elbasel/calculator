@@ -45,7 +45,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     /* flex-direction: column; */
-    padding: 16px;
+    padding: 64px;
 }
 
 main {
@@ -62,12 +62,38 @@ main {
 
     display: flex;
     flex-direction: column;
+    gap: 16px;
 
 }
 
 #history {
     flex: 1;
     border: 1px solid var(--seconday);
+
+    display: flex;
+    flex-direction: column;
+}
+
+#clear-history-button-area {
+    border: 1px solid white;
+    width: 100%;
+    display: flex;
+}
+
+#clear-history-button {
+    flex: 1;
+    padding: 8px;
+}
+
+#history-entries {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+p {
+    font-size: 32px;
+    border-bottom: 1px solid var(--seconday);
+    padding: 16px;
 }
 
 #display {
@@ -77,12 +103,14 @@ main {
     display: flex;
     justify-content: center;
 
-    padding: 8px;
 }
 
 #display-text {
-    min-width: 158px;
+    width: 406px;
     border: 1px solid var(--caption);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -92,7 +120,7 @@ main {
     display: flex;
     flex-direction: column;
 
-    gap: 4px;
+    gap: 8px;
 }
 
 .row {
@@ -101,11 +129,12 @@ main {
 
     display: flex;
     justify-content: center;
-    gap: 4px;
+    gap: 8px;
 }
 
 button {
-    min-width: 50px;
+    font-size: 2rem;
+    width: 130px;
     color: var(--text);
     border: 1px solid var(--caption);
 }
