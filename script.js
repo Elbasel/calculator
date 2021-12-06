@@ -164,7 +164,7 @@ function outputCalcResult() {
     }
     else {
         addHistoryEntry(displayText.textContent, result)
-        displayText.innerHTML = '&nbsp' + result.toFixed(3)
+        displayText.innerHTML = '&nbsp' + Math.round(result * 1000) / 1000
     }
 }
 
