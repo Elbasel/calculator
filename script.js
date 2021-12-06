@@ -144,6 +144,10 @@ function divide(operation) {
 
 function outputCalcResult() {
 
+    if (displayText.textContent.length === 1) {
+        return
+    }
+
     const result = calc(displayText.textContent)
 
     if (result == Infinity) {
