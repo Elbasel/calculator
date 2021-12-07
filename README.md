@@ -1,3 +1,4 @@
 # calculator
 
-Basic calcutor
+Basic web calulator done for the odin project.
+
