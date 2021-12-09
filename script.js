@@ -180,7 +180,6 @@ function addHistoryEntry(operation, result) {
     const lastEntry = document.querySelector('#history-entries').lastChild
     
     if (lastEntry && lastEntry.innerHTML === entry.innerHTML) return;
-    debugger
     if(displayText.innerHTML.replace('&nbsp;', '').trim() == result) return;
 
     historyArea.appendChild(entry)
