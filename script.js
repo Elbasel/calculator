@@ -147,6 +147,7 @@ function outputCalcResult() {
     if (displayText.textContent.length === 1) {
         return
     }
+    if (lastCharIsOperator()) deleteChar();
 
     const result = calc(displayText.textContent)
 
@@ -163,6 +164,7 @@ function outputCalcResult() {
         
     }
     else {
+        
         addHistoryEntry(displayText.textContent, result)
         displayText.innerHTML = '&nbsp' + Math.round(result * 1000) / 1000
     }
@@ -171,8 +173,16 @@ function outputCalcResult() {
 
 
 function addHistoryEntry(operation, result) {
+
     const entry = document.createElement('p')
     entry.innerHTML = operation.trim() + ' = ' + result
+
+    const lastEntry = document.querySelector('#history-entries').lastChild
+    
+    if (lastEntry && lastEntry.innerHTML === entry.innerHTML) return;
+    debugger
+    if(displayText.innerHTML.replace('&nbsp;', '').trim() == result) return;
+
     historyArea.appendChild(entry)
     historyArea.scrollTop = historyArea.scrollHeight;
 }
@@ -194,6 +204,7 @@ function keyboadrdShorcuts(e) {
         return
     }
     if (e.key === '=' || e.key === 'Enter') {
+
         outputCalcResult(e)
         return
     }
