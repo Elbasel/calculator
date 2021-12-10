@@ -41,7 +41,7 @@ function reachedTextLimit() {
 
 function lastCharIsOperator() {
     for (const op of OPERATORS) {
-        if(displayText.textContent.slice(-3) === ' ' + op + ' ') return true;
+        if(displayText.textContent.endsWith(' ' + op + ' ')) return true;
     }
     return false;
 }
@@ -230,6 +230,9 @@ function keyboadrdShorcuts(e) {
                     return
                 case '-':
                     displayText.textContent += ' - '
+                    return
+                case '.':
+                    addDecimalPoint()
                     return
             }
         }
