@@ -8,6 +8,7 @@ const historyArea = document.querySelector('#history-entries')
 const clearHistoryButton = document.querySelector('#clear-history-button')
 const dotButton = document.querySelector('#dot-button')
 
+const username;
 
 const DISPLAY_LIMIT = 20;
 const OPERATORS = '+-×÷'
@@ -264,3 +265,5 @@ dotButton.addEventListener('click', addDecimalPoint)
 
 
 document.addEventListener('keydown', keyboadrdShorcuts)
+
+console.log("hello")
